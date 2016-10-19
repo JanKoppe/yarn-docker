@@ -21,6 +21,7 @@ RUN apk add --no-cache curl make gcc g++ python linux-headers paxctl libgcc libs
       https://github.com/yarnpkg/yarn/releases/download/${YARN_VER}/yarn-${YARN_VER}.tar.gz \
   && tar -zxf yarn-${YARN_VER}.tar.gz \
   && rm yarn-${YARN_VER}.tar.gz \
+  && rm dist/ghr* \
   && mv dist yarn \
   && ln -s /usr/lib/node_modules/yarn/bin/yarn /usr/local/bin/yarn \
   && apk del curl make gcc g++ python linux-headers paxctl libgcc libstdc++ \
