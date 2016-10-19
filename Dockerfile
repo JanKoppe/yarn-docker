@@ -1,7 +1,7 @@
 FROM alpine:3.4
 MAINTAINER Jan Koppe <post@jankoppe.de>
-ENV NODE_VER=v6.8.1
-ENV YARN_VER=v0.15.0
+ENV NODE_VER=v6.9.0
+ENV YARN_VER=v0.16.0
 RUN apk add --no-cache curl make gcc g++ python linux-headers paxctl libgcc libstdc++ \
   && curl -o node-${NODE_VER}.tar.gz -sSL https://nodejs.org/dist/${NODE_VER}/node-${NODE_VER}.tar.gz \
   && tar -zxf node-${NODE_VER}.tar.gz \
