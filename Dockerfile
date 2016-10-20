@@ -22,7 +22,7 @@ RUN apk add --no-cache curl make gcc g++ python linux-headers paxctl libgcc libs
   && tar -zxf yarn-${YARN_VER}.tar.gz \
   && rm yarn-${YARN_VER}.tar.gz \
   && mv dist yarn \
-  && ln -s /usr/lib/node_modules/yarn/bin/yarn /usr/local/bin/yarn \
+  && ln -s /usr/lib/node_modules/yarn/bin/yarn.js /usr/local/bin/yarn \
   && apk del curl make gcc g++ python linux-headers paxctl libgcc libstdc++ \
   && rm -rf /etc/ssl /node-${NODE_VER}.tar.gz /node-${NODE_VER} /usr/include \
       /usr/share/man /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp \
